@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--Jeremy Orr-->
+<!--VFW 1209-->
+<!--Project: web app part 1-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Construction project planning app." />
+		<meta name="keywords" content="construction, mobile planning, project planning" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<link href="css/styles.css" rel="stylesheet" />
+		<title>Construction Project Planner</title>
+	</head>
+	<body>
+		<h1>Construction Project Planner</h1>
+		<form method="post" id="projectForm" />
+			<fieldset>
+				<legend>Project Details</legend>
+				<ul id="errors"></ul>
+				<ul>
+					<li id="select">
+						<label for="constructionType">Construction Type:</label>
+					</li>
+					<li>
+						<label for="projectName">Project Name:</label>
+						<input type="text" id="projectName" />
+					</li>
+					<li>
+						<label for="projectBudget">Project Budget:</label>
+						<input type="range" min="0" max="10000" id="projectBudget" />
+					</li>
+					<li>
+						<label for="projectLocation" id="projectLocation" class="projectLocation">Project Location:</label>
+						<input type="checkbox" name="projectLocation" value="Interior" id="Interior"/>Interior</br>
+						<input type="checkbox" name="projectLocation" value="Exterior" id="Exterior"/>Exterior
+					</li>
+					<li>
+						<label for="date">Start Date:</label></br>
+						<input type="date" id="date">
+					</li>
+					<li>
+						<label for="supplyList">Supply List:</label></br>
+						<textarea height="100px" width="320px" id="supplyList"/>
+						</textarea>
+					</li>
+					<li>
+						<label for="submit">Submit Project:</label></br>
+						<input type="submit" value="Submit Project" id="submit"/>
+						<input type="hidden" name="Country" value="USA"/>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+		<script src="js/main.js" type="text/javascript"></script>
+		<footer>
+			<nav id="bottomNav">
+				<a href="#" id="clearData">Clear Data</a> / 
+				<a href="#" id="displayData">Display Data</a>
+				<a href="additem.html" id="addItem" style="display:none;">Add Item</a>
+			</nav>
+		</footer>
+	</body>
+</html>

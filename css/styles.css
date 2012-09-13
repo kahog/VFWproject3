@@ -1,0 +1,64 @@
+/*
+Jeremy orr
+VFW 1209
+Project 2 CSS
+*/
+body {
+	background-color: #d3d3d3;
+}
+h1 {
+	border: 1px solid gray;
+	padding: 5px;
+	background-color: #696969;
+	color: white;
+	margin: 6px;
+	font-family: Times;
+	font-style:	 bold;
+	font-size: 22px;
+}
+div{
+	border: 1px solid gray;
+	padding: 5px;
+	background-color: #a9a9a9;
+	margin: 6px;
+	margin-top: 10px;
+	font-family: Times;
+	font-style:	 bold;
+	font-size: 16px;
+}
+h2 {
+	border: 1px solid gray;
+	padding: 5px;
+	background-color: #a9a9a9;
+	margin: 6px;
+	margin-top: 10px;
+	font-family: Times;
+	font-style:	 bold;
+	font-size: 20px;
+}
+form {
+	width: 95%;
+	padding-bottom: 20px;
+	padding-left: 9px;
+}
+fieldset{
+	letter-spacing: .08em;
+	background-color: #a9a9a9;
+	box-shadow: 10px 10px 5px #888888;
+	outline: gray solid thick;
+}
+
+ul#errors{
+	color: red;
+
+}
+a {margin: 6px;
+}
+.projectLocation{display: block;
+}
+#bottomNav:link    {color:blue;}
+#bottomNav:visited {color:red;}
+#bottomNav:hover {color: Green;}
+#bottomNav:active  {color:yellow;}
+a#bottomNav{text-decoration: underline;
+}
