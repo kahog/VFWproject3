@@ -1,7 +1,7 @@
 //Jeremy orr
 // VFW 1209
-//Project 2
-//09/07/2012
+//Project 4
+//09/14/2012
 
 
 
@@ -81,11 +81,16 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function getData(){
 		toggleControls("on");
+		if (localStorage.length === 0){
+			alert("There is no data in local storage so default data was added.");
+			autoFillData();
+		}
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "Project List");
 		var makeList = document.createElement("ul");
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
+		
 		for (var i=0, len=localStorage.length; i<len; i++){
 			var makeLi = document.createElement("li");
 			var linksLi = document.createElement("li");
@@ -95,6 +100,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var obj = JSON.parse(value);
 			makeSubList = document.createElement("ul");
 			makeLi.appendChild(makeSubList);
+			getImage(obj.types[1], makeSubList);
 			for (var n in obj){
 				var makeSubLi = document.createElement("li");
 				makeSubList.appendChild(makeSubLi);
@@ -104,7 +110,22 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 			makeItemLinks(localStorage.key(i), linksLi);
 		}
-	};
+	}
+	
+	function getImage(typeName, makeSubList){
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg.setAttribute("src", "images/"+typeName + ".png")
+		imageLi.appendChild(newImg);
+	}
+	
+	function autoFillData(){
+		for (var n in json){
+			var id = Math.floor(Math.random() * 100000101);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
 
 	//make links in stored data
 	function makeItemLinks(key, linksLi){
@@ -225,7 +246,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	
 	// Construction types array for drop down menu
-	var constructionTypes = ["--Choose A Type--", "Industrial", "Commercial", "Residential", "Multi-Family Residential"];
+	var constructionTypes = ["--Choose A Type--", "Industrial", "Commercial", "Residential", "Multi-Family"];
 	var	locationValue;
 	var errMsg = $("errors");
 	makeCats();

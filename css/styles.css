@@ -1,10 +1,11 @@
 /*
 Jeremy orr
 VFW 1209
-Project 2 CSS
+Project 4 CSS
+09/14/2012
 */
 body {
-	background-color: #d3d3d3;
+	background-color: black;
 }
 h1 {
 	border: 1px solid gray;
@@ -44,8 +45,16 @@ form {
 fieldset{
 	letter-spacing: .08em;
 	background-color: #a9a9a9;
-	box-shadow: 10px 10px 5px #888888;
-	outline: gray solid thick;
+	outline: white solid thick;
+}
+legend{
+	background: black; 
+	color: white;
+	font-family: Times;
+	font-style:	 bold;
+	font-size: 20px;
+	outline: white solid thick;
+	
 }
 
 ul#errors{
@@ -60,5 +69,7 @@ a {margin: 6px;
 #bottomNav:visited {color:red;}
 #bottomNav:hover {color: Green;}
 #bottomNav:active  {color:yellow;}
-a#bottomNav{text-decoration: underline;
+#bottomNav{text-decoration: underline;
+			outline: white solid thick;
+			background-color: #a9a9a9;
 }
